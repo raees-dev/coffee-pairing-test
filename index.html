@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI Coffee + Pastry Pairing — Test</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-bg">
+    <div class="wrap">
+      <header class="header">
+        <div class="logo">
+          <div class="bean">☕</div>
+          <div>
+            <h1>BrewiFy — Pairing Test</h1>
+            <p class="sub">AI-style coffee + pastry marketing pairing</p>
+          </div>
+        </div>
+        <div class="badge">Test Task • 24h</div>
+      </header>
+
+      <main class="main">
+        <form id="pairForm" class="card form-card" onsubmit="return false;">
+          <div class="controls">
+            <label class="field">
+              <span>Coffee</span>
+              <select id="coffee" class="select">
+                <option>Espresso</option>
+                <option>Americano</option>
+                <option>Latte</option>
+                <option>Cappuccino</option>
+                <option>Flat White</option>
+                <option>Filter Coffee</option>
+                <option>Cold Brew</option>
+              </select>
+            </label>
+
+            <label class="field">
+              <span>Pastry</span>
+              <select id="pastry" class="select">
+                <option>Croissant</option>
+                <option>Danish</option>
+                <option>Muffin</option>
+                <option>Biscotti</option>
+                <option>Scone</option>
+                <option>Tart</option>
+                <option>Brownie</option>
+                <option>Cheesecake slice</option>
+              </select>
+            </label>
+
+            <div class="actions">
+              <button type="button" id="genBtn" class="btn primary">Generate Pairing ✨</button>
+              <button type="button" id="clearBtn" class="btn ghost">Clear</button>
+            </div>
+          </div>
+        </form>
+
+        <section id="result" class="card result-card" style="display:none;">
+          <div class="result-top">
+            <div class="result-title">Pairing Suggestion</div>
+            <div class="result-sub">AI-style marketing line</div>
+          </div>
+
+          <div class="pairingBox" id="pairingBox">
+            <div class="coffeeChip" id="coffeeChip">☕</div>
+            <div class="pairingTextWrap">
+              <p id="pairingText" class="pairingText"></p>
+              <div class="meta" id="metaText"></div>
+            </div>
+            <div class="sparkles" id="sparkles" aria-hidden="true"></div>
+          </div>
+
+          <div class="exportBtns">
+            <button id="downloadCSV" class="btn outline">Download CSV</button>
+            <button id="downloadJSON" class="btn outline">Download JSON</button>
+            <button id="downloadHTML" class="btn outline">Download HTML</button>
+            <button id="copyBtn" class="btn mini">Copy</button>
+          </div>
+        </section>
+
+    <div class="corner-decor">
+      <div class="blob b1"></div>
+      <div class="blob b2"></div>
+      <div class="blob b3"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
